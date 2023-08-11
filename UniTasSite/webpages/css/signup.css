@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/*Relevant css for nav, headings, form dropdowns and buttons */
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+#navrego {
+    background-color: lightgreen;
+    color:green;
+    font-size: large;
+    font-weight:700;
+}
+
+  
+.pagetitle {
+    padding-top: 10px;
+    font-size: x-large;
+}
+
+.institle {
+    padding-top: 10px;
+    font-size: large;
+}
+
+
+#inputCity, #inputUserType{
+    background-color: lightgreen;
+} 
+
+.confidentialityconfirmation, .passwordstrength{
+    font-size: medium;
+    font-weight: bold;
+}
+
+#cancel, #submitbtn{
+    width: 100%;
+    font-size: larger;
+    text-align: center;
+}
+
+
+/*form validation css*/
+input:valid{
+    border-color: green;
+}
+
+
+input:invalid{
+    border-color: #900;
+}
+  
+input:focus:invalid {
+    outline: none;
+}
+  
+
+
+

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/**Relevant CSS for navs, headers, image overlays and buttons*/
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#navlisting {
+    background-color: lightgreen;
+    color:green;
+    font-size: large;
+    font-weight:700;
+}
+
+#searchfield{
+    padding-bottom: 10px;
+}
+  
+.pagetitle {
+    padding-top: 10px;
+    font-size: xx-large;
+    padding-bottom: 10px;
+}
+
+#housesheader, #roomsheader, #cottagesheader{
+    font-weight: 700;
+    font-size: x-large;
+    padding-bottom: 10px;
+}
+
+.overlay {
+    position:absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: white;
+  }
+
+#room{
+    position: relative;
+}
+
+.btn-primary{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+#house:hover .overlay{
+    opacity: 0.75;
+}
+ 
+#room:hover .overlay{
+    opacity: 0.75;
+}
+
+#cottage:hover .overlay{
+    opacity: 0.75;
+}
+
+/*form validation css*/
+input:valid{
+    border-color: green;
+}
+
+
+input:invalid{
+    border-color: #900;
+}
+  
+input:focus:invalid {
+    outline: none;
+}

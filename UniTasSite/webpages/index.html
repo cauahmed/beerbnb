@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UniTas Accomodation Index</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+  
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
+
+
+  
+  
+</head>
+<body>
+  <!--Home navigation-->
+    <div class="container-fluid">
+        <ul class="nav justify-content-center" id="nav">
+          <li class="nav-item">
+            <a class="nav-link disabled" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="houselist.html">Listing</a>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Admin
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="hostdashdemo.html">Host Dashboard</a>
+              <a class="dropdown-item" href="admindashdemo.html">Admin Dashboard</a>
+            </div>
+          </li>
+        </ul>
+    </div>
+    <div class="webtitle">
+        <div class="container-fluid">
+            <center><b><h>UTAS Accomodation</h></b></center>
+        </div>
+      </div>
+      <div class="searchtitle">
+        <div class="container-fluid">
+            <center><b><h>Find a house</h></b></center>
+        </div>
+      </div>
+      
+    <!--Search form for finding accomodation with relevant built in navigation-->
+    <div class="container-fluid" id="formcontainer">
+        <form class="needs-validation" id="searchform">
+            <div class = "form-row">
+              <div class="form-group col-sm-3">
+                <label for="inputlocation">Location</label>
+                <select id="inputlocation" class="form-control" required>
+                  <option selected></option>
+                  <option>Hobart</option>
+                  <option>Burnie</option>
+                  <option>Launceston</option>
+                </select>
+              </div>
+              <div class="form-group col-sm-3">
+                <label for="inputnoofguests">No of Guests</label>
+                <select id="inputnoofguests" class="form-control" required>
+                  <option selected></option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3+</option>
+                </select>
+              </div>
+              <div class="form-group col-sm-3">
+                <label for="datetimepicker1">Check In Date</label>
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" required/>
+                    <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+              </div>
+              <div class="form-group col-sm-3">
+                <label for="datetimepicker2">Check Out Date</label>
+                <div class='input-group date' id='datetimepicker2'>
+                    <input type='text' class="form-control" required/>
+                    <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker1').datetimepicker();
+                });
+              </script>
+              <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker2').datetimepicker();
+                });
+              </script>
+              <div class="form-row">
+                  <div class="form-group col-sm-12">
+                    <button type="submit" class="btn btn-primary" id="searchbtn">Search</button>
+                  </div>
+              </div>
+              <script type="text/javascript">
+                
+              </script>
+            </form>
+    </div>
+    <!--Responsibe images to search for a specific type of accomodation-->
+    <div class="defaulthouses">
+        <div class = "container-fluid">
+            <div class = "row">
+                <div class ="col-sm-4" id="house">
+                    <img src="./images/house.jpg" class="img-thumbnail" alt="Entire House">
+                    <div class = "overlay">
+                    <div class="houselabel">Entire House</div>
+                    </div>
+                </div>
+                <div class ="col-sm-4" id="room">
+                    <img src="./images/room.jpg" class="img-thumbnail" alt="Single Room">
+                    <div class = "overlay">
+                    <div class="houselabel">Single Rooms</div>
+                    </div>
+                </div>
+                <div class ="col-sm-4" id="cottage">
+                    <img src="./images/cottage.jpg" class="img-thumbnail" alt="Cottage">
+                    <div class = "overlay">
+                    <div class="houselabel">Cottages</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

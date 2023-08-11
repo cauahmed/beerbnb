@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*custom nav*/
+#nav {
+    background-color: lightgreen;
+    color:green;
+    font-size: large;
+    font-weight:700;
+}
+
+/*heading css*/  
+.webtitle {
+    padding-top: 10px;
+    font-size: x-large;
+}
+
+.searchtitle {
+    padding-top: 10px;
+    font-size: large;
+}
+
+/*form css*/
+#formcontainer{
+    padding-top:20px
+}
+
+#inputlocation, #inputnoofguests{
+    background-color: lightgreen;
+}
+
+
+#searchbtn{
+    width: 100%;
+    font-size: large;
+}
+
+/*image file css and overlay*/
+.defaulthouses{
+    margin-top: 20px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+.houselabel {
+    position: absolute;
+    top: 250px;
+    left: 25px;
+    font-size: xx-large;
+    color: black;
+  }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: white;
+  }
+
+#house:hover .overlay{
+    opacity: 0.75;
+}
+ 
+#room:hover .overlay{
+    opacity: 0.75;
+}
+
+#cottage:hover .overlay{
+    opacity: 0.75;
+}
+
+/*form validation css*/
+input:valid{
+    border-color: green;
+}
+
+
+input:invalid{
+    border-color: #900;
+}
+  
+input:focus:invalid {
+    outline: none;
+}
